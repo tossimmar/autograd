@@ -1,6 +1,11 @@
 import numpy as np
 
 class Adam:
+	'''
+	Adam optimization algorithm.
+	
+	See: https://pytorch.org/docs/stable/generated/torch.optim.Adam.html
+	'''
 	def __init__(self, parameters, lr = 1e-3, beta1 = 0.9, beta2 = 0.999, weight_decay = 0):
 		self.parameters = {parameter: {'t': 1, 'mt': 0, 'vt': 0} for parameter in parameters}
 		self.lr = lr
